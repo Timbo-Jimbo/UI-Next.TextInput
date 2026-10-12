@@ -1,0 +1,19 @@
+{
+    "name": "TimboJimboEditor.UINext.TextInput",
+    "rootNamespace": "TimboJimboEditor.UINext.TextInput",
+    "references": [
+        "TimboJimbo.UINext.TextInput",
+        "TimboJimbo.UINext"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

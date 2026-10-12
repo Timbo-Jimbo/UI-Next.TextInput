@@ -1,0 +1,27 @@
+{
+    "name": "TimboJimboTests.UINext.TextInput",
+    "rootNamespace": "TimboJimboTests.UINext.TextInput",
+    "references": [
+        "TimboJimbo.UINext",
+        "TimboJimbo.UINext.Text",
+        "TimboJimbo.UINext.TextInput",
+        "TimboJimboTests.UINext",
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
