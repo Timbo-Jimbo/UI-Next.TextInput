@@ -1,12 +1,12 @@
 {
 	"name": "com.timbojimbo.uinext.textinput",
 	"displayName": "UI Next Text Input",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"unity": "6000.5",
 	"description": "Text fields for UI Next, typed into with the platform's own keyboard, as browsers and Flutter do: autocorrect, suggestions, composition for Chinese, Japanese and Korean, dictation and the system's edit menu go through the platform, while the field is drawn and animated like the rest of the UI.",
 	"dependencies": {
-		"com.timbojimbo.uinext": "0.3.0",
-		"com.timbojimbo.uinext.text": "0.1.0",
+		"com.timbojimbo.uinext": "0.4.0",
+		"com.timbojimbo.uinext.text": "0.2.0",
 		"com.unity.inputsystem": "1.20.0",
 		"com.unity.modules.androidjni": "1.0.0"
 	},
