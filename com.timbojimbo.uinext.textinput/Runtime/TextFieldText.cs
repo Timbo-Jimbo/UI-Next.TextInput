@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using TimboJimbo.UINext.Text;
-using TimboJimbo.UINext.Text.Markup;
 using TimboJimbo.UINext.TextInput;
 using UnityEngine;
 
@@ -114,7 +113,7 @@ namespace TimboJimbo.UINext
                         float px = box.x;
                         if (!multiline)
                         {
-                            float free = box.width - TextLayout.Measure(in placeholderInput, Context(in placeholderInput)).x;
+                            float free = box.width - TextLayout.Measure(in placeholderInput).x;
                             if (free > 0f)
                                 px += free * AlignmentShare(placeholderInput.Alignment, placeholder.IsRightToLeft);
                         }
@@ -306,7 +305,7 @@ namespace TimboJimbo.UINext
             _layout ??= new TextLayout();
             if (!_made || !Same(in input, in _laidOut))
             {
-                _drawable = _layout.Generate(in input, Context(in input));
+                _drawable = _layout.Generate(in input);
                 _laidOut = input;
                 _made = true;
             }
@@ -318,7 +317,7 @@ namespace TimboJimbo.UINext
             _placeholder ??= new TextLayout();
             if (!_placeholderMade || !Same(in input, in _placeholderLaidOut))
             {
-                _placeholderDrawable = _placeholder.Generate(in input, Context(in input));
+                _placeholderDrawable = _placeholder.Generate(in input);
                 _placeholderLaidOut = input;
                 _placeholderMade = true;
             }
@@ -341,10 +340,8 @@ namespace TimboJimbo.UINext
             var unbounded = input;
             unbounded.WidthPx = -1f;
             unbounded.WordWrap = false;
-            return TextLayout.Measure(in unbounded, Context(in unbounded)).x;
+            return TextLayout.Measure(in unbounded).x;
         }
-
-        private static InlineContext Context(in TextLayoutInput input) => new(null, input.FontSizePx, UnityEngine.Color.white);
 
         private static bool Same(in TextLayoutInput a, in TextLayoutInput b) =>
             a.Text == b.Text && a.Font == b.Font && a.FontSizePx == b.FontSizePx && a.WordWrap == b.WordWrap

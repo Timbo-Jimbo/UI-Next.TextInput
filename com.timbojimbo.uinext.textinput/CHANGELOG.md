@@ -1,3 +1,9 @@
+## [Unreleased]
+
+### Changed
+
+- Lays text out with UI Next Text's rule-driven layout, which takes no `InlineContext`; a text field's text is plain, as it was.
+
 ## [0.1.0] - 12/10/2026
 
 UI Text Input's platform layer, moved over to UI Next, with UI Next's text field.

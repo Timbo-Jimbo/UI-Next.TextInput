@@ -438,7 +438,6 @@ namespace TimboJimbo.UINext
         {
             var input = TextLayoutInput.Default;
             input.Text = placeholder ? _placeholder.Value ?? "" : DisplayOf(_value.Value.Text);
-            input.RichText = false;
             input.Font = _font.Value;
             input.FontSizePx = Mathf.Max(1f, _fontSize.Value);
             input.WidthPx = width;
