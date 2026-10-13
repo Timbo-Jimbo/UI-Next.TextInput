@@ -1,4 +1,8 @@
-## [Unreleased]
+## [0.3.0] - 14/10/2026
+
+### Changed
+
+- `TextFieldText` says when what it measures changes, as UI Next's layout no longer tracks what measuring reads: it watches the field's text and how it is set, and asks for its node to be laid out again when they change.
 
 ### Removed
 

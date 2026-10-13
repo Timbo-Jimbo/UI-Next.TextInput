@@ -8,7 +8,7 @@ Requires Unity 6000.5 or newer, [UI Next](https://github.com/Timbo-Jimbo/UI-Next
 
 ## Installation
 
-Install UI Next Text and UI Next first, then open **Window > Package Manager**, click Add, choose **Add package from git URL...** and paste `https://github.com/Timbo-Jimbo/UI-Next.TextInput.git?path=com.timbojimbo.uinext.textinput#0.2.0`.
+Install UI Next Text and UI Next first, then open **Window > Package Manager**, click Add, choose **Add package from git URL...** and paste `https://github.com/Timbo-Jimbo/UI-Next.TextInput.git?path=com.timbojimbo.uinext.textinput#0.3.0`.
 
 ## How it works
 
