@@ -1,3 +1,9 @@
+## [Unreleased]
+
+### Removed
+
+- `TextFieldText.MinWidth`, with UI Next's `IMeasurable.MinWidth`.
+
 ## [0.2.0] - 13/10/2026
 
 ### Changed

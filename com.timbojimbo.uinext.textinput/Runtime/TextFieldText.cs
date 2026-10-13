@@ -64,9 +64,6 @@ namespace TimboJimbo.UINext
             return new Vector2(width, height);
         }
 
-        // As narrow as the field makes it: a single line scrolls, several wrap.
-        public float MinWidth => CaretWidth;
-
         // ── Drawing ──────────────────────────────────────────────────────────────
 
         protected internal override void Draw(Painter painter)
