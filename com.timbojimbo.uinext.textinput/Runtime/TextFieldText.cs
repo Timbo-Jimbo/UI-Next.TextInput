@@ -38,6 +38,11 @@ namespace TimboJimbo.UINext
         [NonSerialized] private Vector2 _scroll;
         [NonSerialized] private Vector2 _origin;
 
+        // What it measures, as its watch last read it from the field (see Watch).
+        [NonSerialized] private Effect _watch;
+        [NonSerialized] private TextLayoutInput _watched;
+        [NonSerialized] private bool _watching;
+
         // The field it is the text of: set by the field, or found above it.
         internal TextField Field
         {
@@ -161,8 +166,31 @@ namespace TimboJimbo.UINext
             }
         }
 
+        protected override void OnEnable()
+        {
+            base.OnEnable();
+            _watch = new Effect(Watch);
+            _watch.Invalidate();
+        }
+
+        // Reads the field's text and how it is set again whenever one of them changes, as values resolve, before layout:
+        // when what it measures changes, its node is laid out again (ContentChanged). Measuring reads them untracked.
+        private void Watch()
+        {
+            var field = Field;
+            if (field == null) return;
+            var input = field.LayoutInput(-1f);
+            if (_watching && Same(in input, in _watched)) return;
+            _watched = input;
+            _watching = true;
+            ContentChanged();
+        }
+
         protected override void OnDisable()
         {
+            _watch?.Dispose();
+            _watch = null;
+            _watching = false;
             base.OnDisable();
             _layout?.Dispose();
             _layout = null;
